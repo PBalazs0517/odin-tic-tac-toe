@@ -30,6 +30,7 @@ const game = ( () => {
             boardOverlay.classList.toggle('active');
             inputs.forEach(input => input.disabled = 'true');
             startBtn.disabled = true;
+            resetBtn.disabled = false;
         };
         const reset = () => {
             boardOverlay.classList.toggle('active');
@@ -38,6 +39,7 @@ const game = ( () => {
                 input.value = '';
             });
             startBtn.disabled = false;
+            resetBtn.disabled = true;
             players = [];
             tiles.forEach( tile => {
                 tile.dataset.marker = 'none';
